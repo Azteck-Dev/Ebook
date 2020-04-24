@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<!-- metadatos del web site -->
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="El infame libro negro de la muerte">
+	<meta name="keywords" content="hp lovecraft, magia, magia negra, maldiciones, nierlazhotep, relato">
+	<title>Bookpedia | Necronomicón</title>
+	<!-- icono del web site -->
+	<link rel="icon" href="img/logo-2.png">
+	<!-- Hoja de estilo css personal -->
+	<link rel="stylesheet" href="css/main.css" type="text/css">
+	<!-- Ultima compilacion min.css de Bootstrap -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+	<!-- ultima compilacion de FontAwesome -->
+	<script src="https://kit.fontawesome.com/ea9b6ffb65.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+	<!-- barra de información y login -->
+	<div class="container-fluid bg-dark info-bar">
+		<div class="row py-2">
+			<div class=" row col-lg-6 d-none d-md-none d-lg-inline-block">
+				<a href="#"><i class="fas fa-phone"></i> Tel: (664)312-6757</a>
+				<a href="#"><i class="fas fa-at"></i> bookpedia@contact.com</a>
+			</div>
+
+			<div class=" row col-12 col-md-6 justify-content-end">
+				<a data-toggle="modal" data-target="#registro" href="#">
+					<i class="fas fa-user-edit"></i> Registrarme
+				</a>
+				<a data-toggle="modal" data-target="#logearse" href="#">
+					<i class="fas fa-user"></i> Logín
+				</a>
+			</div>
+		</div>
+	</div>
+
+	<!-- ventana pop-up de login -->
+	<div class="modal fade" id="logearse" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="logearse">Login</h5>
+				</div>
+				<div class="modal-body">
+					<form>
+						<div class="form-group">
+							<label for="recipient-name" class="col-form-label">Correo :</label>
+							<input type="email" class="form-control" id="logMail" required>
+						</div>
+						<div class="form-group">
+							<label for="message-text" class="col-form-label">Password :</label>
+							<input type="password" class="form-control" id="logPass" required>
+						</div>
+						<div class="form-check">
+							<input class="form-check-input" type="checkbox" value="" id="remember">
+							<label class="form-check-label" for="remember">
+								Recordar
+							</label>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+							<input type="submit" class="btn btn-warning" value="Ingresar">
+						</div>
+					</form>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<!-- ventana pop-up de registro -->
+	<div class="modal fade" id="registro" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="registro">Registro</h5>
+				</div>
+				<div class="modal-body">
+					<form>
+						<div class="form-group">
+							<label for="recipient-name" class="col-form-label">Usuario :</label>
+							<input type="text" class="form-control" id="regUser" required>
+						</div>
+						<div class="form-group">
+							<label for="recipient-name" class="col-form-label">Correo :</label>
+							<input type="email" class="form-control" id="regMail" required>
+						</div>
+						<div class="form-group">
+							<label for="message-text" class="col-form-label">Password :</label>
+							<input type="password" name="" class="form-control" id="regPass" required>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+							<input type="submit" class="btn btn-warning" value="Registrarme">
+						</div>
+					</form>
+				</div>
+
+			</div>
+		</div>
+	</div>
+	<!-- /registro de usuario -->
+	<!-- /Barra de información  -->
+
+	<!-- Barra de Navegacion -->
+	<nav class="navbar navbar-expand-md navbar-light text-center bg-sandstorm nav-size sticky-top">
+		<!-- Logotipo del websaite -->
+		<a class="navbar-brand logo-text" href="index.html" style="color: #000;">
+			<img class="logo-img" src="img/logo.png" alt="logo"> Bookpedia
+		</a>
+		<!-- botón del menú desplegable movíl -->
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> 
+			<i class="fas fa-caret-down size-menu"></i>
+		</button>
+		<!--  Contenido de la Barra de navegación -->
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item dropdown bg-sandstorm">
+					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Catégorias
+					</a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+						<a class="dropdown-item" href="categorias.html">Terror</a>
+						<a class="dropdown-item" href="categorias.html">Guias</a>
+						<a class="dropdown-item" href="categorias.html">Filósofia</a>
+						<a class="dropdown-item" href="categorias.html">Nóvelas</a>
+					</div>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">Contácto</a>
+				</li>
+
+			</ul>
+
+			<!-- cuadro de busqueda -->
+			<form class="form-inline my-2 my-lg-0 justify-content-center">
+				<input class="form-control mr-sm-2" type="search" placeholder="Buscar..." aria-label="Search">
+				<button class="btn btn-outline-dark d-none d-md-block ml-n2 my-2 my-sm-0" type="submit">
+					<i class="fas fa-search"></i>
+				</button>
+				<button class="btn btn-outline-dark d-block d-md-none ml-n2 my-2 my-sm-0" type="submit">
+					Búscar
+				</button>
+			</form>
+		</div>
+	</nav>
+	<!-- /barra de navegación -->
+
+	<!-- Contenido -->
+	<nav aria-label="breadcrumb">
+			<ol class="breadcrumb">
+				<li class="breadcrumb-item"><a href="index.html">Inicio</a></li>
+				<li class="breadcrumb-item"><a href="categorias.html">Cátegorias</a></li>
+				<li class="breadcrumb-item"><a href="#">Terror</a></li>
+				<li class="breadcrumb-item active" aria-current="page">Necrononomicón</li>
+			</ol>
+		</nav>
+	<div class="container-fliuid py-4 book">
+		<div class="container">
+			<!-- Titulo del libro/PDF -->
+			<hr class="separador">
+
+			<div class="container">
+				<h1>El Necromicón</h1>
+				<cite><small>- HP LoveCraft,</small></cite>
+				<small><a href="#"> Terror</a></small>
+				<small>Posted By <a href="index.html">Bookpedia</a></small>
+			</div>
+
+			<hr class="separador">
+			<!-- Descripcion -->
+			<div class="container">
+				<div class="container-fluid py-4">
+					​<img src="img/libros/necromicom.jpg" class="rounded pb-3 float-lg-left float-md-none float-sm-none mr-4" alt="Necromión">
+					<h4>Descripción</h4>
+					<p>Aunque los escépticos afirman que El Necronomicón es un tomo fantástico creado por H.P. Lovecraft, los auténticos investigadores de los misterios esotéricos del mundo saben la verdad: El Necronomicón es un volumen blasfemo de conocimiento prohibido escrito por el árabe loco Abdul Alhazred. Incluso hoy, a pesar de las tentativas por destruir todas las copias en cualquier idioma a lo largo de los siglos, aún existen algunos ejemplares, escondidos. Dentro de este libro encontrarás historias, ensayos y diferentes versiones acerca del libro blasfemo. A través de los testimonios de Robert Silverberg, Frederick Pohl, John Brunner y el propio Lovecraft, entre otros, ahora tú también puedes aprender el verdadero saber de Abdul Alhazred y conocer de primera mano el ignoto poder que se encuentra entre sus páginas.</p>
+				</div>
+				<div class="row">
+					<div class="container">
+						<h4>Autor</h4>
+						<p><strong>Howard Philips Lovecraft (1890-1937)</strong> escribió, o ayudó a escribir, más de 65 relatos, decenas de artículos y cientos de poemas, además de unas 100.000 cartas. Será recordado por la diáfana intensidad de su visión cósmica y su insinuación de inmortalidad. <i>Kadath y Cthulhu, Arkham y Ulthar, El Necronomicón y Nyarlathotep... </i>Su mundo onírico se ha convertido, en las décadas transcurridas desde su muerte, en una permanente contribución a nuestra cultura popular. Su obra ha sido traducida a más de cincuenta idiomas.</p>
+					</div>
+				</div>
+				<!-- Compartir y vistas del PDF -->
+				<div class="row">
+					<div class="container col-6 share-media">
+						<cite title="Compartir"><i class="fas fa-share-alt-square"> | </i></cite>
+						<a href="#"><i class="fab fa-facebook-messenger"></i></a>
+						<a href="#"><i class="fab fa-whatsapp whats"></i></a>
+						<a href="#"><i class="fab fa-twitter twit"></i></a>
+						<a href="#"><i class="fab fa-instagram insta"></i></a>
+					</div>
+					<div class="container col-6 text-right share-media">
+						<cite title="Vistas"><i class="fas fa-eye"></i><small> 123</small></cite> 
+					</div>
+				</div>
+				<!-- /vistas y compartir -->
+			</div>
+			<hr class="separador">
+			<!-- Descargas -->
+			<div class="container text-center py-3">
+				<div class="container">
+					<a href="#" class="btn btn-outline-warning btn-dark btn-lg d-none d-md-inline-block">Leer</a>
+					<a href="#" class="btn btn-outline-warning btn-dark btn-lg">Descargar</a>
+				</div>
+			</div>
+			<hr class="separador">
+		</div>
+	</div>
+	<!-- Comentarios -->
+	<article>
+		<div class="container py-3">
+			<div class="container">
+				<div class="container">
+					<div class="media">
+						<img src="img/male-avatar-maker.svg" class="align-self-start mr-3" style="width:60px">
+						<div class="media-body">
+							<h4>Media Top</h4>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil atque ducimus minima alias aliquid architecto aliquam perferendis, unde officiis molestiae illum optio, adipisci facilis quasi assumenda nostrum rerum id. Laborum similique accusantium vel, porro temporibus, nemo reprehenderit voluptatem quaerat magni quam provident laboriosam enim illum accusamus, maiores consequuntur molestias dicta!</p>
+						</div>
+					</div>
+					<hr>
+					<div class="media">
+						<img src="img/male-avatar-maker.svg" class="align-self-start mr-3" style="width:60px">
+						<div class="media-body">
+							<h4>Media Top</h4>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil atque ducimus minima alias aliquid architecto aliquam perferendis, unde officiis molestiae illum optio, adipisci facilis quasi assumenda nostrum rerum id. Laborum similique accusantium vel, porro temporibus, nemo reprehenderit voluptatem quaerat magni quam provident laboriosam enim illum accusamus, maiores consequuntur molestias dicta!</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</article>
+
+	<!--  /contenido -->
+
+
+	<!-- footer -->
+	<footer>
+		<!-- newsletter -->
+		<div class="container-fluid bg-dark pt-4 py-5">
+			<div class="container">
+				<form>
+					<div class="row text-white">
+						<div class="col-12 text-center">
+							<h1>Newsletter</h1>
+						</div>
+					</div>
+					<div class="row justify-content-center">
+						<div class="col-12 col-md-5 py-3">
+							<input type="text" class="form-control" placeholder="Nombre" required>
+						</div>
+						<div class="col-12 col-md-5 py-3">
+							<input type="email" class="form-control" placeholder="Correo" required>
+						</div>
+						<div class="py-3">
+							<input type="submit" class="btn btn-dark btn-outline-warning" value="Enviar">
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+		<!-- /newsletter -->
+		<div class="container-fluid bg-gunmetal d-none d-md-block text-white py-4">
+			<div class="container">
+				<!-- Información en linea -->
+				<div class="row">
+					<div class="container col-7 col-md-5 foot">
+						<h5>Contácto</h5>
+						<ul class="list-unstyled">
+							<li><a href="#"><i class="fas fa-phone"></i> (664)312-6757</a></li>
+							<li><a href="#"><i class="fas fa-at"></i> bookpedia@contacto.com</a></li>
+							<li><a href="#"><i class="fas fa-map-marked-alt"></i> Av.Sal si puedes,Col. El pipila BC,Mx.</a></li>
+						</ul>
+					</div>
+					<!-- Acccesos rapidos -->
+					<div class="container col-7 col-md-4">
+						<h5>Acceso Rapido</h5>
+						<ul class="list-unstyled">
+							<li><a href="categorias.html">
+								<i class="fas fa-bookmark"></i> Categorias</a>
+							</li>
+							<li><a href="#">
+								<i class="fas fa-book-reader"></i> Autores</a>
+							</li>
+							<li><a href="#">
+								<i class="fab fa-hotjar"></i> Más leeido</a>
+							</li>
+							<li><a href="#">
+								<i class="fas fa-question-circle"></i> Quejas o Sugerencias</a>
+							</li>
+						</ul>
+					</div>
+					<!-- Redes Sociales -->
+					<div class="container-fluid text-center col-md-3 d-none d-md-block">
+						<h5>Redés</h5>
+						<div class="list-group-horizontal redes">
+							<li class="list-inline-item">
+								<a href="#"><i class="fab fa-facebook"></i></a>
+							</li>
+							<li class="list-inline-item">
+								<a href="#"><i class="fab fa-instagram"></i></a>
+							</li>
+							<li class="list-inline-item">
+								<a href="#"><i class="fab fa-whatsapp"></i></a>
+							</li>
+							<li class="list-inline-item">
+								<a href="#"><i class="fab fa-twitter"></i></a>
+							</li>
+							<li class="list-inline-item">
+								<a href="#"><i class="fab fa-github"></i></a>
+							</li>
+						</div>
+					</div>
+				</div>
+				<!-- /información en linea -->
+			</div>
+		</div>
+		<!-- footer Movil  -->
+		<div class="container-fluid text-center d-md-none d-block bg-gunmetal py-2">
+			<div class="list-group-horizontal redes">
+				<li class="list-inline-item mr-4">
+					<a href="#"><i class="fab fa-facebook"></i></a>
+				</li>
+				<li class="list-inline-item mr-4">
+					<a href="#"><i class="fab fa-instagram"></i></a>
+				</li>
+				<li class="list-inline-item mr-4">
+					<a href="#"><i class="fab fa-whatsapp"></i></a>
+				</li>
+				<li class="list-inline-item mr-4">
+					<a href="#"><i class="fab fa-twitter"></i></a>
+				</li>
+				<li class="list-inline-item mr-4">
+					<a href="#"><i class="fab fa-github"></i></a>
+				</li>
+			</div>
+		</div>
+		<!-- /footer movil -->
+		<div class="container-fluid bg-gunmetal py-3">
+			<div class="row">
+				<div class="container text-center text-warning">
+					Todos los derechos reservados &copy 2020  | Bookpedia
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!-- /footer -->
+
+</body>
+<!-- Scripts propios -->
+<script src="js/script.js"></script>
+<!-- core js scripts bootstrap -->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</h
+tml>
