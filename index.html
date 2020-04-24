@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<!-- metadatos del web site -->
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="biblioteca en linea con PDF's de todo tipo">
+	<meta name="keywords" content="book, ebook, pdf, word, libro, documento, biblioteca">
+	<title>Bookpedia</title>
+	<!-- icono del web site -->
+	<link rel="icon" href="img/logo-2.png">
+	<!-- Hoja de estilo css personal --> 	
+	<link rel="stylesheet" href="css/main.css" type="text/css">
+	<!-- Ultima compilacion min.css de Bootstrap -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+	<!-- ultima compilacion de FontAwesome -->
+	<script src="https://kit.fontawesome.com/ea9b6ffb65.js" crossorigin="anonymous"></script>
+</head>
+<body>
+	<!-- barra de información y login -->
+	<div class="container-fluid bg-dark info-bar">
+		<div class="row py-2">
+			<div class=" row col-lg-6 d-none d-md-none d-lg-inline-block">
+				<a href="#"><i class="fas fa-phone"></i> Tel: (664)312-6757</a>
+				<a href="#"><i class="fas fa-at"></i> bookpedia@contact.com</a>
+			</div>
+
+			<div class=" row col-12 col-lg-6 justify-content-end">
+				<a data-toggle="modal" data-target="#registro" href="#">
+					<i class="fas fa-user-edit"></i> Registrarme
+				</a>
+				<a data-toggle="modal" data-target="#logearse" href="#">
+					<i class="fas fa-user"></i> Logín
+				</a>
+			</div>
+		</div>
+	</div>
+
+	<!-- ventana pop-up de login -->
+	<div class="modal fade" id="logearse" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="logearse">Login</h5>
+				</div>
+				<div class="modal-body">
+					<form>
+						<div class="form-group">
+							<label for="recipient-name" class="col-form-label">Correo :</label>
+							<input type="email" class="form-control" id="logMail" required>
+						</div>
+						<div class="form-group">
+							<label for="message-text" class="col-form-label">Password :</label>
+							<input type="password" class="form-control" id="logPass" required>
+						</div>
+						<div class="form-check">
+							<input class="form-check-input" type="checkbox" value="" id="remember">
+							<label class="form-check-label" for="remember">
+								Recordar
+							</label>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+							<input type="submit" class="btn btn-warning" value="Ingresar">
+						</div>
+					</form>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<!-- ventana pop-up de registro -->
+	<div class="modal fade" id="registro" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="registro">Registro</h5>
+				</div>
+				<div class="modal-body">
+					<form>
+						<div class="form-group">
+							<label for="recipient-name" class="col-form-label">Usuario :</label>
+							<input type="text" class="form-control" id="regUser" required>
+						</div>
+						<div class="form-group">
+							<label for="recipient-name" class="col-form-label">Correo :</label>
+							<input type="email" class="form-control" id="regMail" required>
+						</div>
+						<div class="form-group">
+							<label for="message-text" class="col-form-label">Password :</label>
+							<input type="password" name="" class="form-control" id="regPass" required>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+							<input type="submit" class="btn btn-warning" value="Registrarme">
+						</div>
+					</form>
+				</div>
+
+			</div>
+		</div>
+	</div>
+	<!-- /registro de usuario -->
+<!-- /Barra de información  -->
+
+<!-- Barra de Navegacion -->
+	<nav class="navbar navbar-expand-md navbar-light text-center bg-sandstorm nav-size sticky-top">
+		<!-- Logotipo del websaite -->
+		<a class="navbar-brand logo-text" href="index.html" style="color: #000;">
+			<img class="logo-img" src="img/logo.png" alt="logo"> Bookpedia
+		</a>
+		<!-- botón del menú desplegable movíl -->
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> 
+			<i class="fas fa-caret-down size-menu"></i>
+		</button>
+		<!--  Contenido de la Barra de navegación -->
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item dropdown bg-sandstorm">
+					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Catégorias
+					</a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+						<a class="dropdown-item" href="categorias.html">Nóvelas</a>
+						<a class="dropdown-item" href="categorias.html">Terror</a>
+						<a class="dropdown-item" href="categorias.html">Fántasia</a>
+						<a class="dropdown-item" href="categorias.html">Guias | Manuales</a>
+						<a class="dropdown-item" href="categorias.html">Filósofia</a>
+						<a class="dropdown-item" href="categorias.html">Románce</a>
+					</div>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="contacto.html">Contácto</a>
+				</li>
+
+			</ul>
+
+			<!-- cuadro de busqueda -->
+			<form class="form-inline my-2 my-lg-0 justify-content-center">
+				<input class="form-control mr-sm-2" type="search" placeholder="Buscar..." aria-label="Search">
+				<button class="btn btn-outline-dark d-none d-md-block ml-n2 my-2 my-sm-0" type="submit">
+					<i class="fas fa-search"></i>
+				</button>
+				<button class="btn btn-outline-dark d-block d-md-none ml-n2 my-2 my-sm-0" type="submit">
+					Búscar
+				</button>
+			</form>
+		</div>
+	</nav>
+<!-- /barra de navegación -->
+
+<!-- contenido -->
+	<div class="jumbotron text-center vector">
+		<h1>Bienvenidos!</h1>
+		<p>Esperamos y encuentres lo que buscas, si nos hace falta algun libro que requiras
+		<br>
+		 no dudes en ponerte en contácto con nosotros y pronto pondremos brindartelo.</p>
+	</div>
+	<!-- Ultimos libros agregados -->
+	<div class="container-fluid py-5">
+		<h3>Ultimas Adiciones</h3>
+		<hr class="separador">
+		<div class="container col">
+			<div class="card-group">
+				<div class="row py-4 col-12 col-md-6 col-lg-4">
+					<!-- linro 1 -->
+					<div class="card ml-3 mr-4">
+						<img src="img/libros/necromicom.jpg" class="card-img-top" alt="HP Lovecraft">
+						<div class="card-body">
+							<h5 class="card-title">Necrónomicon</h5>
+							<p class="card-text">De todos los libros mágicos del mundo, pocos son tan famosos (o infames) como el Necronomicón, el libro de la ley de los muertos. Se trata de una recopilación de conjuros y rituales antiguos que según el mito traen la locura o la muerte a la persona que trata de ponerlos en práctica.</p>
+						<div class="text-center">
+							<a class="btn col-6 btn-dark btn-lg btn-outline-warning" href="books.html">Leer</a>
+						</div>
+							
+						</div>
+						<div class="card-footer">
+							<small class="text-muted"><a href="categorias.html">Terror</a></small>
+						</div>
+					</div>
+				</div>
+				<div class="row py-4 mr-4 col-12 col-md-6 col-lg-4">
+				<!-- Libro 2  -->
+					<div class="card">
+						<img src="img/libros/hush_hush.jpg" class="card-img-top" alt="Hush Hush">
+						<div class="card-body">
+							<h5 class="card-title">Hush Hush	</h5>
+							<p class="card-text">Enamorarse no formaba parte de los planes de Nora Grey. Nunca se había sentido especialmente atraída por sus compañeros de instituto, a pesar de los esfuerzos de su mejor amiga, Vee, para encontrarle una pareja. Así era hasta la llegada de Patch.</p>
+						<div class="text-center py-4">
+							<a class="btn col-6 btn-dark btn-lg btn-outline-warning" href="books.html">Leer</a>
+						</div>
+						</div>
+						<div class="card-footer">
+							<small class="text-muted"><a href="categorias.html">Novelas</a></small>
+						</div>
+					</div>
+				</div>
+				<!-- libro 3 -->
+				<div class="row py-4 col-12 col-lg-4 d-md-none d-lg-block">
+					<div class="card">
+						<img src="img/libros/php.jpg" class="card-img-top" alt="RedUser">
+						<div class="card-body">
+							<h5 class="card-title">PHP 6 Avanzado</h5>
+							<p class="card-text">Este libro brinda todas las herramientas necesarias para acercar al trabajo diario del desarrollador los avances mas importantes incorporados en PHP 6. En sus paginas, repasaremos todas las tecnicas actuales para potenciar el desarrollo de sitios web.</p>
+							<div class="text-center py-4">
+								<a class="btn col-6 btn-dark btn-lg btn-outline-warning" href="books.html">Leer</a>
+							</div>
+						</div>
+						<div class="card-footer">
+							<small class="text-muted"><a href="categorias.html">Guias | Manuales</a></small>
+						</div>
+					</div>
+					<!-- /libros -->
+				</div>
+			</div>
+		</div>
+	</div>
+<!-- /contenido -->
+
+<!-- footer -->
+	<footer>
+		<!-- newsletter -->
+		<div class="container-fluid d-none d-md-block bg-dark pt-4 py-5">
+			<div class="container">
+				<form>
+					<div class="row text-white">
+						<div class="container text-center">
+							<h1>Newsletter</h1>
+						</div>
+					</div>
+					<div class="row justify-content-center">
+						<div class="col-5">
+							<input type="text" class="form-control" placeholder="Nombre" required>
+						</div>
+						<div class="col-5">
+							<input type="email" class="form-control" placeholder="Correo" required>
+						</div>
+						<div>
+							<input type="submit" class="btn btn-dark btn-outline-warning" value="Enviar">
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+		<!-- /newsletter -->
+		<div class="container-fluid bg-gunmetal d-none d-md-block text-white py-4">
+			<div class="container">
+				<!-- Información en linea -->
+				<div class="row">
+					<div class="container col-7 col-md-5 foot">
+						<h5>Contácto</h5>
+						<ul class="list-unstyled">
+							<li>
+								<a href="#"><i class="fas fa-phone"></i> (664)312-6757</a>
+							</li>
+							<li>
+								<a href="#"><i class="fas fa-at"></i> bookpedia@contacto.com</a>
+							</li>
+							<li>
+								<a href="#"><i class="fas fa-map-marked-alt"></i> Av.Sal si puedes,Col. El pipila BC,Mx.</a>
+							</li>
+						</ul>
+					</div>
+					<div class="container col-7 col-md-4">
+						<h5>Accesos Rapidos</h5>
+						<ul class="list-unstyled">
+							<li>
+								<a href="categorias.html"><i class="fas fa-bookmark"></i> Categorias</a>
+							</li>
+							<li>
+								<a href="#"><i class="fas fa-book-reader"></i> Autores</a>
+							</li>
+							<li>
+								<a href="#"><i class="fab fa-hotjar"></i> Ultimas Adiciones</a>
+							</li>
+							<li>
+								<a href="#"><i class="fas fa-question-circle"></i> Quejas o Sugerencias</a>
+							</li>
+						</ul>
+					</div>
+					<div class="container-fluid text-center col-md-3 d-none d-md-block">
+						<h5>Redés</h5>
+						<div class="list-group-horizontal redes">
+							<li class="list-inline-item">
+								<a href="#"><i class="fab fa-facebook"></i></a>
+							</li>
+							<li class="list-inline-item">
+								<a href="#"><i class="fab fa-instagram"></i></a>
+							</li>
+							<li class="list-inline-item">
+								<a href="#"><i class="fab fa-whatsapp"></i></a>
+							</li>
+							<li class="list-inline-item">
+								<a href="#"><i class="fab fa-twitter"></i></a>
+							</li>
+						</div>
+					</div>
+				</div>
+			<!-- /información en linea -->
+			</div>
+		</div>
+	<!-- footer Movil  -->
+		<div class="container-fluid text-center d-md-none d-block bg-gunmetal py-2">
+			<div class="list-group-horizontal redes">
+				<li class="list-inline-item mr-4">
+					<a href="#"><i class="fab fa-facebook"></i></a>
+				</li>
+				<li class="list-inline-item mr-4">
+					<a href="#"><i class="fab fa-instagram"></i></a>
+				</li>
+				<li class="list-inline-item mr-4">
+					<a href="https://chat.whatsapp.com/AcgJy5cIUm94PSAMisB90e">
+						<i class="fab fa-whatsapp"></i>
+					</a>
+				</li>
+				<li class="list-inline-item mr-4">
+					<a href="#"><i class="fab fa-twitter"></i></a>
+				</li>
+			</div>
+		</div>
+	<!-- /footer movil -->
+		<div class="container-fluid bg-gunmetal py-3">
+			<div class="row">
+				<div class="container text-center text-warning">
+					Todos los derechos reservados &copy 2020  | Bookpedia
+				</div>
+			</div>
+		</div>
+	</footer>
+<!-- /footer -->
+
+</body>
+<!-- Scripts propios -->
+<script src="js/script.js"></script>
+<!-- core js scripts bootstrap -->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</html>

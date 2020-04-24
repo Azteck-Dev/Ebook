@@ -1,0 +1,291 @@
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower&display=swap');
+/* font-family: 'Indie Flower', cursive; */
+@import url('https://fonts.googleapis.com/css?family=Fjalla+One&display=swap');
+/* font-family: 'Fjalla One', sans-serif; */
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+/* font-family: 'Roboto', sans-serif; */
+:root{
+	--desire:		 #E84855;
+	--sandstorm:	 #EEC643;
+	--gunmetal:		 #202030;
+	--dark-grenn:	 #002E2C;
+	--bronze:		 #CBFF4D;
+	--white:		 #FFFFFF;
+	--dark:			 #000000;
+	--ice:			 #F4F4F9;
+	--melon:		 #F29559;
+	--gray:			 #333333;
+	--lime:			 #89FC00;
+	--mint:			 #7FC29B;
+	--sea:			 #30BCED;
+	--sky:			 #1C77C3;
+	--cherry:		 #DF2935;
+	--pink:			 #F7C59F;
+}
+
+
+*{
+	padding: 0;
+	margin: 0;
+	font-family:  'Fjalla One', sans-serif;
+	letter-spacing: 1px;
+}
+
+/*------------------------------  Barra de informacion superior  ------------------------------*/
+div.info-bar{
+	font-size: 14px;
+	color: var(--dark);
+}
+
+.info-bar a{
+	text-decoration: none;
+	margin-left: 50px;
+	color: var(--ice);
+}
+
+.info-bar a:hover{
+	text-decoration: none;
+	color: var(--sandstorm);
+}
+
+.size-menu{
+	font-size: 35px;
+}
+
+
+/*------------------------------  Barra de navegación  ------------------------------*/
+
+.logo-img{
+	margin-left: 50px;
+	height: 50px;
+	width: 50px;
+}
+
+nav a.logo-text{
+	font-size: 30px;
+	font-family: 'Fjalla One', sans-serif; 
+}
+
+.nav-link{
+	color: var(--dark)!important;
+	font-weight: bolder;
+	letter-spacing: 3px;
+	font-family: 'Fjalla One', sans-serif; 
+}
+
+.nav-link:hover{
+	color: var(--white)!important;
+	font-weight: bolder;
+}
+
+.navbar-toggler{
+    border: 0px solid transparent!important;
+}
+
+button:focus{
+    outline: 0px dotted!important;
+    outline: 0px auto -webkit-focus-ring-color!important;
+}
+/*------------------------------ Jumbotron ------------------------------*/
+.vector{
+	background: url(../img/pattrones.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	max-height: 600px;
+	opacity: .5;
+}
+
+.vector p{
+	font-size: 25px;
+	font-weight: bolder;
+	opacity: 1;
+}
+
+.card img{
+	padding: 25px;
+	max-height: 500px;
+}
+
+
+/*------------------------------  Quitar outline de los inputs  ------------------------------*/
+input[type=text]:focus, 
+input[type=password]:focus, 
+input[type=email]:focus, 
+input[type=number]:focus, 
+[type=text].form-control:focus, 
+[type=password].form-control:focus, 
+[type=email].form-control:focus, 
+[type=tel].form-control:focus, 
+[contenteditable].form-control:focus {
+	box-shadow: inset 0 -1px 0 var(--white);
+	border-bottom: 4px solid var(--sandstorm);
+}
+
+textarea:focus, 
+textarea.form-control:focus{
+	box-shadow:  inset 0 -1px 0 var(--white);
+	border-bottom:  6px solid var(--sandstorm);
+}
+
+input.form-control:focus{
+	box-shadow: inset 0 -1px 0 var(--sandstorm);
+}
+
+
+/*------------------------------  Footer  ------------------------------*/
+footer h5{
+	opacity: .4;
+}
+
+div ul li a{
+	color: var(--sandstorm);
+}
+
+div ul li a:hover{
+	color: var(--melon);
+	text-decoration: none;
+}
+.svg-new{
+	height: 100px;
+	width: 100px;
+}
+.redes a{
+	font-size: 40px;
+	color: var(--sandstorm);
+	text-align: right;
+}
+
+.redes a:hover{
+	color: var(--melon);
+}
+
+/* --------------------------- Presentacion de PDF's --------------------------- */
+h1,h2,h3,h4,h5,h6,p,cite,small,span{
+	font-family: 'Roboto', sans-serif;
+}
+
+.share-media cite{
+	font-size: 30px;
+	color: var(--gray);
+}
+
+.share-media a i{
+	font-size: 30px;
+	font-weight: bolder;
+}
+
+.whats{
+	color: var(--lime);
+}
+
+.whats:hover{
+	color: var(--mint);
+}
+
+.twit{
+	color: var(--sea)
+}
+
+.twit:hover{
+	color: var(--sky);
+}
+
+.insta{
+	color: var(--cherry);
+}
+
+.insta:hover{
+	color: var(--pink);
+}
+
+/*------------------------------------- Categorias -------------------------------------*/
+.card-book{
+	padding: 0;
+	margin: 0;
+	cursor: pointer;
+	width: 236px;
+    height: 354px;
+}
+
+.front,
+.back{
+	width: 236px;
+    height: 354px;
+	overflow: hidden;
+	backface-visibility: hidden;
+	position: absolute;
+	transition: transform .6s linear;
+}
+
+.front img{
+	height: 100%;
+}
+
+.front{
+	transform: perspective(600px) rotateY(0deg);
+}
+.back{
+	background: #50514F;
+	transform: perspective(600px) rotateY(180deg);
+	border: 6px solid var(--sandstorm);
+}
+
+.back-content{
+	padding: 5px;
+	color: var(--ice);
+	text-align: center;
+	width: 100%;
+}
+
+.back-content span{
+	font-size: 13px;
+	font-weight: bold;
+}
+
+.sm a{
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.card-book:hover > .front{
+	transform: perspective(600px) rotateY(-180deg);
+
+}
+.card-book:hover > .back{
+	transform: perspective(600px) rotateY(0deg);
+	border: 6px solid var(--sandstorm);
+}
+
+.bg-contact{
+	background: url(../img/contact.jpg);
+	background-size: cover ;
+	background-repeat: no-repeat;
+}
+
+
+/*------------------------------  background colors  ------------------------------*/
+.bg-desire{
+	background-color: var(--desire);
+}
+
+
+.bg-sandstorm{
+	background-color: var(--sandstorm);
+}
+
+.bg-gunmetal{
+	background-color: var(--gunmetal);
+}
+
+.bg-dark-green{
+	background-color: var(--dark-grenn);
+}
+
+.bg-bronze{
+	background-color: var(--bronze);
+}
+
+.separador{
+	border: 3px solid var(--sandstorm);
+}
